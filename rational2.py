@@ -27,22 +27,24 @@ class rat:
         return rat(divnum,divden)
 half = rat(1,2)
 quart = rat(1,4)
-def grat():
+def grat(pizza):
     one = rat(1,1)
     gratnum = rat(1,1)
-    for i in range(1,100):
+    for i in range(1,pizza):
         gratnum = one + rat(one.ratnum,gratnum.ratnum)
     return str(float(gratnum))
-def prat():
+def prat(pizza2):
     one = rat(1,1)
     two = rat(2,1)
     three = rat(3,1)
     six = rat(6,1)
     pratnum = rat(6,1)
-    for i in range(1,100000):
+    for i in range(1,pizza2):
         square = (three*three)
-        pratnum = six + rat(square.ratnum,pratnum.ratnum)
+        pratnum = six + square/pratnum
         three = three + two
-    threeprat = 3 + (1/pratnum.ratnum)
+    threeprat = 3 + 1/pratnum.ratnum
     return str(threeprat)
-print(prat())
+print(grat(100))
+print(prat(100))
+
